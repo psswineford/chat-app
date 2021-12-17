@@ -20,6 +20,7 @@ import { backgroundColor } from 'react-native/Libraries/Components/View/ReactNat
 
 
 
+
 const styles = StyleSheet.create({
    
     chatScreenText: {
