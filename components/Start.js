@@ -15,7 +15,7 @@ class Start extends Component {
         },
     };
 
-    
+
 
     changeBackGroundColor = (newBGColor) => {
         this.setState({ bgColorSelector: newBGColor });
@@ -40,30 +40,46 @@ class Start extends Component {
                         {/* Color Selector */}
                         <Text style={styles.colorText}>Choose Background Color</Text>
                         <View style={styles.colorSelector}>
-                            
+
                             <TouchableOpacity
+                                accessible={true}
+                                accessibilityLabel="Select black background"
+                                accessibilityHint="Lets you choose the background color of the chat screen"
+                                accessibilityRole="button"
                                 style={styles.colorButton1}
                                 onPress={() => this.changeBackGroundColor(this.state.bgColors.color1)}
                             >
-                                
+
                             </TouchableOpacity>
                             <TouchableOpacity
+                                accessible={true}
+                                accessibilityLabel="Select purple background"
+                                accessibilityHint="Lets you choose the background color of the chat screen"
+                                accessibilityRole="button"
                                 style={styles.colorButton2}
                                 onPress={() => this.changeBackGroundColor(this.state.bgColors.color2)}
                             >
-                                
+
                             </TouchableOpacity>
                             <TouchableOpacity
+                                accessible={true}
+                                accessibilityLabel="Select grey background"
+                                accessibilityHint="Lets you choose the background color of the chat screen"
+                                accessibilityRole="button"
                                 style={styles.colorButton3}
                                 onPress={() => this.changeBackGroundColor(this.state.bgColors.color3)}
                             >
-                                
+
                             </TouchableOpacity>
                             <TouchableOpacity
+                                accessible={true}
+                                accessibilityLabel="Select olive background"
+                                accessibilityHint="Lets you choose the background color of the chat screen"
+                                accessibilityRole="button"
                                 style={styles.colorButton4}
                                 onPress={() => this.changeBackGroundColor(this.state.bgColors.color4)}
                             >
-                                
+
                             </TouchableOpacity>
                         </View>
                         {/* Start Chatting Button */}
