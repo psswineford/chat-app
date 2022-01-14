@@ -2,15 +2,12 @@
   "name": "chat-app",
   "version": "1.0.0",
   "main": "node_modules/expo/AppEntry.js",
-  "homepage": "https://psswineford.github.io/react-project/",
   "scripts": {
     "start": "expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
-    "eject": "expo eject",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "eject": "expo eject"
   },
   "dependencies": {
     "@react-native-community/masked-view": "^0.1.11",
@@ -30,7 +27,11 @@
     "react-native-screens": "~3.8.0",
     "react-native-web": "0.17.1",
     "react-navigation": "^4.4.4",
-    "@react-native-async-storage/async-storage": "~1.15.0"
+    "@react-native-async-storage/async-storage": "~1.15.0",
+    "expo-permissions": "~13.0.3",
+    "expo-image-picker": "~11.0.3",
+    "expo-location": "~13.0.4",
+    "react-native-maps": "0.28.1"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
