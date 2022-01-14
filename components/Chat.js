@@ -4,7 +4,7 @@ import { Bubble, GiftedChat, InputToolbar } from 'react-native-gifted-chat';
 import NetInfo from '@react-native-community/netinfo';
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import CustomActions from "./CustomActions";
-//import { Constants, MapView, Location, Permissions } from 'expo';
+import MapView from 'react-native-maps';
 //import { backgroundColor } from 'react-native/Libraries/Components/View/ReactNativeStyleAttributes';
 
 const firebase = require("firebase");
@@ -189,8 +189,8 @@ class Chat extends Component {
             <MapView
               style={{ width: 150, height: 100, borderRadius: 13, margin: 3 }}
               region={{
-                latitude: currentMessage.location.latitude,
-                longitude: currentMessage.location.longitude,
+                latitude: parseInt(currentMessage.location.latitude),
+                longitude: parseInt(currentMessage.location.longitude),
                 latitudeDelta: 0.0922,
                 longitudeDelta: 0.0421,
               }}
@@ -215,7 +215,7 @@ class Chat extends Component {
                     messages={this.state.messages}
                     user={this.state.user}
                     renderActions={this.renderCustomActions}
-                    //rrenderCustomView={this.renderCustomView}
+                    renderCustomView={this.renderCustomView}
                     onSend={messages => this.onSend(messages)}
                     user={{
                         _id: this.state.user._id,

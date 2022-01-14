@@ -6,6 +6,7 @@ import * as ImagePicker from "expo-image-picker";
 import firebase from 'firebase';
 import { firestore } from 'firebase';
 import * as Location from "expo-location";
+import { logIfNoNativeHook } from 'react-native/Libraries/Utilities/RCTLog';
 
 class CustomActions extends Component {
 
@@ -58,12 +59,12 @@ class CustomActions extends Component {
               {}
             ).catch((error) => console.log(error));
             const longitude = JSON.stringify(result.coords.longitude);
-            const altitude = JSON.stringify(result.coords.latitude);
+            const latitude = JSON.stringify(result.coords.latitude);
             if (result) {
               this.props.onSend({
                 location: {
-                  longitude: result.coords.longitude,
-                  latitude: result.coords.latitude,
+                  longitude: longitude,
+                  latitude: latitude,
                 },
               });
             }
